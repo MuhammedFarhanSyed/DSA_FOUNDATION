@@ -41,6 +41,44 @@ while True:
         # traversing from head
         while curr:
             print(curr.val , end=" -> ")
-            curr = curr.left
+            curr = curr.right
         print()
+    elif op ==5:
+        ele = int(input("enter element to search => "))
+        curr = head
+        cont = 0
+        while curr:
+            if(curr.val==ele):
+                cont+=1
+            curr = curr.right
+        print(cont)
+    elif op ==6:
+        #queue implementation
+        if not head :
+            print("empyt list")
+        elif not head.right:
+            head = None
+            tail = None
+        else:
+            temp = head
+            head = head.right
+            head.left = None
+            temp.right = None
+            temp = None
+    elif op == 7:
+        #stack implementation
+        if not head:
+            print("list is empty")
+        elif not tail.left:
+            head = None
+            tail = None
+        else:
+            temp = tail
+            tail = tail.left
+            temp.left = None
+            temp = None
+    else :
+        print("exiting...")
+        break
+        
 
