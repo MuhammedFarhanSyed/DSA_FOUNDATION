@@ -6,7 +6,7 @@ class Node:
 head = None
 tail = None
 while True:
-    op = int(input("1.insertFirst  2.insertLast  3.Tail_display  4.head_display => "))
+    op = int(input("1.insertFirst  2.insertLast  3.Tail_display  4.head_display  5.search  6 . FIFO(QUEUE)  7.LIFO(STACK)  => "))
     if op == 1:
         # insert at first/starting
         x  = int(input("enter the value => "))
